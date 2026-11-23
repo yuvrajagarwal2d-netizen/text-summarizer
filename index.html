@@ -77,6 +77,10 @@
             "have", "has", "had", "or", "but", "not", "what", "all", "when", "we",
             "there", "can", "an", "your", "which", "their", "if", "will", "do", "into"
         }
+        def tokenize(text):
+            words = re.findall(r'\b[a-z]{2,}\b',text.lower())
+            return [w for w in words if w not in STOP_WORDS]
+
         
     </script>
 </body>
